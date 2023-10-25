@@ -4,19 +4,20 @@
   <meta charset="utf-8">
   <style type="text/css">
 body {
-  margin-left: 3rem;
+  margin-left: 2rem;
 }
 
 .code {
   font-family: "courier new", monospace;
 }
 
-.highlight, p, h1, h2 {
-  width: 40rem;
+.highlight, p {
+  width: 35rem;
 }
 
 p.text-center {
   text-align: center;
+  width: 100%;
 }
 
 h1 {
@@ -24,6 +25,7 @@ h1 {
   font-size: 50px;
   letter-spacing: -0.02em;
   margin-bottom: 36px;
+  margin-top: 42px;
   line-height: 1em;
   font-weight: 400;
   text-align: center;
@@ -66,6 +68,7 @@ body > p {
 }
 
 .with-plot {
+  display: -webkit-box;
   display: flex;
   flex-direction: row;
 }
@@ -76,6 +79,9 @@ body > p {
   margin-top: -20px;
 }
 
+a {
+  color: #666;
+}
 
 .highlight { background: #f8f8f8; }                                                                                                                                                                                                                                                                         
 .highlight .c { color: #3D7B7B; font-style: italic } /* Comment */                                                                                
@@ -150,7 +156,7 @@ body > p {
   </style>
 </head>
 <body>
-  <h1>Lineāras vienādojumu sistēmas un funkciju aproksimācija</h1>
+  <h1>Lineāras vienādojumu sistēmas<br>un funkciju aproksimācija</h1>
 <p class="text-center">Einārs Lielmanis, RTU CECA0</p>
 <p class="text-center">Risinājumi veikti ar GNU Octave 8.3.</p>
 <h2>1a. Atrisināt vienādojumu sistēmu Ax=B</h2>
@@ -208,7 +214,9 @@ B = [7; 5; 3]
       <span class="mi">3</span> <span class="o">-</span><span class="mi">3</span> <span class="mi">4</span><span class="p">];</span>
 <span class="n">B</span> <span class="p">=</span> <span class="p">[</span> <span class="mi">9</span><span class="p">;</span> <span class="mi">10</span><span class="p">;</span> <span class="mi">5</span> <span class="p">];</span><br>
 <span class="n">res</span> <span class="p">=</span> <span class="n">A</span> <span class="o">\</span> <span class="n">B</span>
-<span class="c">% matrix singular brīdinājums. Vai nu nav risinājuma, vai bezgalīgi daudz risinājumu</span><br>
+<span class="c">% matrix singular brīdinājums. </span>
+<span class="c">% Vai nu nav risinājuma,</span>
+<span class="c">% vai bezgalīgi daudz risinājumu</span><br>
 <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span> <span class="n">A</span> <span class="o">*</span> <span class="n">res</span> <span class="o">-</span> <span class="n">B</span> <span class="p">))</span> <span class="o">&lt;</span> <span class="mf">0.00001</span>
   <span class="c">% atbildē — kaut kas līdzīgs risinājumam</span>
   <span class="nb">disp</span><span class="p">(</span><span class="s">&quot;Bezgalīgi daudz risinājumu?&quot;</span><span class="p">);</span>
@@ -360,7 +368,8 @@ B = [7; 5; 3]
 <span class="nb">axis</span><span class="p">(</span><span class="n">a</span><span class="p">);</span><br>
 <span class="n">xs</span> <span class="p">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span> <span class="mi">5</span><span class="p">];</span>
 <span class="n">ys</span> <span class="p">=</span> <span class="p">[</span><span class="mi">6</span> <span class="mi">1</span><span class="p">];</span><br>
-<span class="c">% oktāva nemāk fitot eksponenti, tapēc nācās nopūsties, paņemt matlabu un iefitot koeficientus,</span>
+<span class="c">% oktāva nemāk fitot eksponenti, tapēc nācās nopūsties, </span>
+<span class="c">% paņemt matlabu un iefitot koeficientus,</span>
 <span class="n">f_right_a</span> <span class="p">=</span> <span class="mf">1.844</span>
 <span class="n">f_right_b</span> <span class="p">=</span> <span class="mf">0.987</span><br>
 <span class="n">f_right</span> <span class="p">=</span> <span class="p">@(</span><span class="n">x</span><span class="p">)</span> <span class="n">f_right_a</span> <span class="o">*</span> <span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">f_right_b</span><span class="p">;</span><br>
@@ -403,7 +412,7 @@ B = [7; 5; 3]
 <span class="n">area_total</span> <span class="p">=</span> <span class="mf">19.039</span>
 </pre></div></p>
 <hr>
-<p>Paskatīties kodu, kurš šo visu veidojis, <a href="https://github.com/einars/matlab-01">githabā</a></p>
+<p class="text-center"><a href="https://github.com/einars/matlab-01">github.com/einars/matlab-01</a></p>
 
 </body>
 </html>

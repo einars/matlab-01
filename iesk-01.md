@@ -1,4 +1,4 @@
-# Lineāras vienādojumu sistēmas un funkciju aproksimācija
+# Lineāras vienādojumu sistēmas<br>un funkciju aproksimācija
 
 <p class="text-center">Einārs Lielmanis, RTU CECA0</p>
 
@@ -97,4 +97,4 @@ Gala aprēķins un ilustrācija:
 
 ---
 
-Paskatīties kodu, kurš šo visu veidojis, var [githabā](https://github.com/einars/matlab-01)
+<p class="text-center"><a href="https://github.com/einars/matlab-01">github.com/einars/matlab-01</a></p>

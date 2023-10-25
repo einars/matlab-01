@@ -4,7 +4,9 @@ A = [ 2 -1 1;
 B = [ 9; 10; 5 ];
 
 res = A \ B
-% matrix singular brīdinājums. Vai nu nav risinājuma, vai bezgalīgi daudz risinājumu
+% matrix singular brīdinājums. 
+% Vai nu nav risinājuma,
+% vai bezgalīgi daudz risinājumu
 
 if abs(min( A * res - B )) < 0.00001
   % atbildē — kaut kas līdzīgs risinājumam

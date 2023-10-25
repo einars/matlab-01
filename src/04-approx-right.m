@@ -8,7 +8,8 @@ axis(a);
 xs = [-1 5];
 ys = [6 1];
 
-% oktāva nemāk fitot eksponenti, tapēc nācās nopūsties, paņemt matlabu un iefitot koeficientus,
+% oktāva nemāk fitot eksponenti, tapēc nācās nopūsties, 
+% paņemt matlabu un iefitot koeficientus,
 f_right_a = 1.844
 f_right_b = 0.987
 

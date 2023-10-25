@@ -1,17 +1,18 @@
 body {
-  margin-left: 3rem;
+  margin-left: 2rem;
 }
 
 .code {
   font-family: "courier new", monospace;
 }
 
-.highlight, p, h1, h2 {
-  width: 40rem;
+.highlight, p {
+  width: 35rem;
 }
 
 p.text-center {
   text-align: center;
+  width: 100%;
 }
 
 h1 {
@@ -19,6 +20,7 @@ h1 {
   font-size: 50px;
   letter-spacing: -0.02em;
   margin-bottom: 36px;
+  margin-top: 42px;
   line-height: 1em;
   font-weight: 400;
   text-align: center;
@@ -61,6 +63,7 @@ body > p {
 }
 
 .with-plot {
+  display: -webkit-box;
   display: flex;
   flex-direction: row;
 }
@@ -71,3 +74,6 @@ body > p {
   margin-top: -20px;
 }
 
+a {
+  color: #666;
+}
