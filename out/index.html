@@ -160,8 +160,7 @@ B = [7; 5; 3]
 <span class="n">x1</span> <span class="p">=</span> <span class="n">res</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">x2</span> <span class="p">=</span> <span class="n">res</span> <span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">x3</span> <span class="p">=</span> <span class="n">res</span> <span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-</pre></div>
-<div class="highlight"><pre><span></span><span class="n">x1</span> <span class="p">=</span> <span class="o">-</span><span class="mf">4.3750</span>
+</pre></div><div class="highlight"><pre><span></span><span class="n">x1</span> <span class="p">=</span> <span class="o">-</span><span class="mf">4.3750</span>
 <span class="n">x2</span> <span class="p">=</span> <span class="mf">2.3125</span>
 <span class="n">x3</span> <span class="p">=</span> <span class="mf">3.2500</span>
 </pre></div>
@@ -184,8 +183,7 @@ B = [7; 5; 3]
 <span class="n">y</span> <span class="p">=</span> <span class="n">res</span> <span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">z</span> <span class="p">=</span> <span class="n">res</span> <span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">t</span> <span class="p">=</span> <span class="n">res</span> <span class="p">(</span><span class="mi">4</span><span class="p">)</span>
-</pre></div>
-<div class="highlight"><pre><span></span><span class="n">x</span> <span class="p">=</span> <span class="mi">0</span>
+</pre></div><div class="highlight"><pre><span></span><span class="n">x</span> <span class="p">=</span> <span class="mi">0</span>
 <span class="n">y</span> <span class="p">=</span> <span class="mi">1</span>
 <span class="n">z</span> <span class="p">=</span> <span class="o">-</span><span class="mf">1.0000</span>
 <span class="n">t</span> <span class="p">=</span> <span class="mi">2</span>
@@ -209,8 +207,7 @@ B = [7; 5; 3]
 <span class="k">else</span>
   <span class="nb">disp</span><span class="p">(</span><span class="s">&quot;Nav risinājumu?&quot;</span><span class="p">);</span>
 <span class="k">endif</span>
-</pre></div>
-<div class="highlight"><pre><span></span><span class="nb">warning</span><span class="p">:</span> <span class="n">matrix</span> <span class="n">singular</span> <span class="n">to</span> <span class="n">machine</span> <span class="n">precision</span><span class="p">,</span> <span class="nb">rcond</span> <span class="p">=</span> <span class="mf">9.25186e-18</span>
+</pre></div><div class="highlight"><pre><span></span><span class="nb">warning</span><span class="p">:</span> <span class="n">matrix</span> <span class="n">singular</span> <span class="n">to</span> <span class="n">machine</span> <span class="n">precision</span><span class="p">,</span> <span class="nb">rcond</span> <span class="p">=</span> <span class="mf">9.25186e-18</span>
 <span class="nb">warning</span><span class="p">:</span> <span class="n">called</span> <span class="n">from</span>
     <span class="p">.</span><span class="n">tmp</span><span class="p">.</span><span class="n">m</span> <span class="n">at</span> <span class="nb">line</span> <span class="mi">6</span> <span class="n">column</span> <span class="mi">5</span><br>
 <span class="n">res</span> <span class="p">=</span>
@@ -225,16 +222,12 @@ B = [7; 5; 3]
 <div class="with-plot"><div class="highlight"><div class="file-name">src/02-plot.m</div><pre><span></span><span class="n">from</span> <span class="p">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
 <span class="n">to</span> <span class="p">=</span> <span class="mi">4</span><span class="p">;</span><br>
 <span class="n">xs</span> <span class="p">=</span> <span class="nb">linspace</span><span class="p">(</span><span class="n">from</span><span class="p">,</span> <span class="n">to</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
-<span class="n">ys</span> <span class="p">=</span> <span class="nb">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">.*</span> <span class="nb">sin</span><span class="p">(</span><span class="mf">1.7</span> <span class="o">.*</span> <span class="n">xs</span><span class="p">)</span> <span class="o">.*</span> <span class="nb">log</span><span class="p">(</span><span class="mf">4.6</span> <span class="o">-</span> <span class="n">xs</span><span class="p">)</span>
-<span class="nb">plot</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">,</span> <span class="s">&#39;b&#39;</span><span class="p">);</span><br>
-<span class="c">% oktāvei ir netriviāli salikt koordinātu asis, ak</span>
-<span class="c">% yline(...)</span>
-<span class="c">% The ’yline’ function is not yet implemented in Octave.</span><br>
+<span class="n">ys</span> <span class="p">=</span> <span class="nb">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">.*</span> <span class="nb">sin</span><span class="p">(</span><span class="mf">1.7</span> <span class="o">.*</span> <span class="n">xs</span><span class="p">)</span> <span class="o">.*</span> <span class="nb">log</span><span class="p">(</span><span class="mf">4.6</span> <span class="o">-</span> <span class="n">xs</span><span class="p">)</span><br>
+<span class="nb">plot</span><span class="p">([</span><span class="n">from</span> <span class="n">to</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span> <span class="mi">0</span><span class="p">],</span> <span class="s">&#39;color&#39;</span><span class="p">,</span> <span class="s">&#39;#aaa&#39;</span><span class="p">);</span>
 <span class="nb">hold</span> <span class="n">on</span><span class="p">;</span>
-<span class="nb">plot</span><span class="p">([</span><span class="n">from</span> <span class="n">to</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span> <span class="mi">0</span><span class="p">],</span> <span class="s">&#39;k&#39;</span><span class="p">);</span>
-<span class="nb">plot</span><span class="p">([</span><span class="mi">0</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">3</span> <span class="mi">3</span><span class="p">],</span> <span class="s">&#39;k&#39;</span><span class="p">);</span>
-</pre></div>
-<div class="plot"><img src="plot-1.png"></div></div>
+<span class="nb">plot</span><span class="p">([</span><span class="mi">0</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">3</span> <span class="mi">3</span><span class="p">],</span> <span class="s">&#39;color&#39;</span><span class="p">,</span> <span class="s">&#39;#aaa&#39;</span><span class="p">);</span><br>
+<span class="nb">plot</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">,</span> <span class="s">&#39;b&#39;</span><span class="p">);</span>
+</pre></div><div class="plot"><img src="plot-1.png"></div></div>
 <p>Uz aci izskatās, ka saknes ir trīs (kaut iespējams, ap 3.6 ir divas, ja kūkums šķērso y asi, nevis tai tikai pieskaras).</p>
 <p>Izmantosim <code>symbolic</code> paciņu, lai atrisinātu šo vienādojumu pa īstam.</p>
 <div class="highlight"><div class="file-name">src/02-solve.m</div><pre><span></span><span class="n">pkg</span> <span class="nb">load</span> <span class="n">symbolic</span><span class="p">;</span><br>
@@ -244,8 +237,7 @@ B = [7; 5; 3]
 <span class="n">x1</span> <span class="p">=</span> <span class="mi">0</span>
 <span class="n">x2</span> <span class="p">=</span> <span class="mi">18</span><span class="o">/</span><span class="mi">5</span>
 <span class="n">x3</span> <span class="p">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="nb">pi</span> <span class="o">/</span> <span class="mi">17</span>
-</pre></div>
-<div class="highlight"><pre><span></span><span class="n">Symbolic</span> <span class="n">pkg</span> <span class="n">v3</span><span class="p">.</span><span class="mf">1.1</span><span class="p">:</span> <span class="n">Python</span> <span class="n">communication</span> <span class="nb">link</span> <span class="n">active</span><span class="p">,</span> <span class="n">SymPy</span> <span class="n">v1</span><span class="p">.</span><span class="mf">12.</span>
+</pre></div><div class="highlight"><pre><span></span><span class="n">Symbolic</span> <span class="n">pkg</span> <span class="n">v3</span><span class="p">.</span><span class="mf">1.1</span><span class="p">:</span> <span class="n">Python</span> <span class="n">communication</span> <span class="nb">link</span> <span class="n">active</span><span class="p">,</span> <span class="n">SymPy</span> <span class="n">v1</span><span class="p">.</span><span class="mf">12.</span>
 <span class="nb">warning</span><span class="p">:</span> <span class="n">passing</span> <span class="n">floating</span><span class="o">-</span><span class="n">point</span> <span class="n">values</span> <span class="n">to</span> <span class="n">sym</span> <span class="n">is</span> <span class="n">dangerous</span><span class="p">,</span> <span class="n">see</span> <span class="s">&quot;help sym&quot;</span>
 <span class="nb">warning</span><span class="p">:</span> <span class="n">called</span> <span class="n">from</span>
     <span class="n">double_to_sym_heuristic</span> <span class="n">at</span> <span class="nb">line</span> <span class="mi">50</span> <span class="n">column</span> <span class="mi">7</span>
@@ -297,8 +289,7 @@ B = [7; 5; 3]
 <span class="n">a_50</span> <span class="p">=</span> <span class="n">tainst_integr</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
 <span class="n">a_100</span> <span class="p">=</span> <span class="n">tainst_integr</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span><br>
 <span class="n">err_100</span> <span class="p">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">a_100</span> <span class="o">-</span> <span class="n">a_quad</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span> <span class="o">/</span> <span class="n">a_quad</span>
-</pre></div>
-<div class="highlight"><pre><span></span><span class="n">a_quad</span> <span class="p">=</span> <span class="mf">1.3144</span>
+</pre></div><div class="highlight"><pre><span></span><span class="n">a_quad</span> <span class="p">=</span> <span class="mf">1.3144</span>
 <span class="n">a_6</span> <span class="p">=</span> <span class="mf">0.026410</span>
 <span class="n">a_50</span> <span class="p">=</span> <span class="mf">1.3524</span>
 <span class="n">a_100</span> <span class="p">=</span> <span class="mf">1.3393</span>
@@ -323,36 +314,86 @@ B = [7; 5; 3]
 <span class="n">a_quad</span> <span class="p">=</span> <span class="nb">quad</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
 <span class="n">a_simp</span> <span class="p">=</span> <span class="n">integr_simpson</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span><br>
 <p><span class="n">err_simp</span> <span class="p">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">a_simp</span> <span class="o">-</span> <span class="n">a_quad</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span> <span class="o">/</span> <span class="n">a_quad</span>
-</pre></div></p>
-<div class="highlight"><pre><span></span><span class="n">a_simp</span> <span class="p">=</span> <span class="mf">1.3133</span>
+</pre></div><div class="highlight"><pre><span></span><span class="n">a_simp</span> <span class="p">=</span> <span class="mf">1.3133</span>
 <span class="n">err_simp</span> <span class="p">=</span> <span class="mf">0.090878</span>
-</pre></div>
+</pre></div></p>
 <p>Simpsona metodei nav ne vainas: ar vien divdesmit dalījumiem, kļūda ir &lt;1%.</p>
 <p>Nav parādīts kodā, bet ar n=100, kļūda ir &lt;0.1%.</p>
 <h2>4. Figūras laukuma aprēķins</h2>
 <p>Figūras laukumu dalīsim divās daļās. Kreiso kārtu izteiksim kā trešās pakāpes polinomu,</p>
 <p>Kreisā daļa:</p>
-<div class="with-plot"><div class="highlight"><div class="file-name">src/04-approx-left.m</div><pre><span></span><span class="n">xs</span> <span class="p">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">4</span> <span class="o">-</span><span class="mf">1.5</span> <span class="o">-</span><span class="mi">3</span>   <span class="o">-</span><span class="mi">2</span><span class="p">];</span>
+<div class="with-plot"><div class="highlight"><div class="file-name">src/04-approx-left.m</div><pre><span></span><span class="c">%%% glītas asis</span>
+<span class="n">a</span> <span class="p">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">5</span> <span class="mi">6</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">7</span><span class="p">];</span>
+<span class="nb">plot</span><span class="p">([</span><span class="n">a</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="n">a</span><span class="p">(</span><span class="mi">2</span><span class="p">)],</span> <span class="p">[</span><span class="mi">0</span> <span class="mi">0</span><span class="p">],</span> <span class="s">&#39;color&#39;</span><span class="p">,</span> <span class="s">&#39;#aaa&#39;</span><span class="p">);</span>
+<span class="nb">hold</span> <span class="n">on</span><span class="p">;</span>
+<span class="nb">plot</span><span class="p">([</span><span class="mi">0</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="n">a</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="n">a</span><span class="p">(</span><span class="mi">4</span><span class="p">)],</span> <span class="s">&#39;color&#39;</span><span class="p">,</span> <span class="s">&#39;#aaa&#39;</span><span class="p">);</span>
+<span class="nb">axis</span><span class="p">(</span><span class="n">a</span><span class="p">);</span><br>
+<p><span class="n">xs</span> <span class="p">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">4</span> <span class="o">-</span><span class="mf">1.5</span> <span class="o">-</span><span class="mi">3</span>   <span class="o">-</span><span class="mi">2</span><span class="p">];</span>
 <span class="n">ys</span> <span class="p">=</span> <span class="p">[</span> <span class="mi">0</span>  <span class="mi">2</span>    <span class="mf">4.5</span>  <span class="mi">6</span><span class="p">];</span><br>
 <span class="c">% polifitojam ar x un y samainītiem vietām</span>
 <span class="n">params</span> <span class="p">=</span> <span class="nb">polyfit</span><span class="p">(</span><span class="n">ys</span><span class="p">,</span> <span class="o">-</span><span class="n">xs</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span><br>
 <span class="n">f_left</span> <span class="p">=</span> <span class="p">@(</span><span class="n">x</span><span class="p">)</span> <span class="nb">polyval</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span><br>
 <span class="n">t</span> <span class="p">=</span> <span class="nb">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span><br>
-<span class="nb">plot</span><span class="p">(</span><span class="o">-</span><span class="n">f_left</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="n">t</span><span class="p">,</span> <span class="s">&#39;color&#39;</span><span class="p">,</span> <span class="s">&#39;b&#39;</span><span class="p">);</span><br>
+<span class="nb">plot</span><span class="p">(</span><span class="o">-</span><span class="n">f_left</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="n">t</span><span class="p">,</span> <span class="s">'color'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">);</span><br>
 <span class="nb">hold</span> <span class="n">on</span><span class="p">;</span><br>
-<span class="nb">plot</span><span class="p">([</span><span class="o">-</span><span class="mi">2</span> <span class="o">-</span><span class="mi">1</span> <span class="o">-</span><span class="mi">1</span> <span class="o">-</span><span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span> <span class="mi">6</span> <span class="mi">0</span> <span class="mi">0</span><span class="p">],</span> <span class="s">&#39;color&#39;</span><span class="p">,</span> <span class="s">&#39;b&#39;</span><span class="p">);</span><br>
+<span class="nb">plot</span><span class="p">([</span><span class="o">-</span><span class="mi">2</span> <span class="o">-</span><span class="mi">1</span> <span class="o">-</span><span class="mi">1</span> <span class="o">-</span><span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span> <span class="mi">6</span> <span class="mi">0</span> <span class="mi">0</span><span class="p">],</span> <span class="s">'color'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">);</span><br></p>
 <p><span class="c">% 1 x 6 = taisnstūris līdz y asij</span>
-<span class="n">area_left</span> <span class="p">=</span> <span class="nb">quad</span><span class="p">(</span><span class="n">f_left</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="o">*</span><span class="mi">6</span><br>
-<span class="c">%%% glītas asis</span>
-<span class="nb">axis</span><span class="p">([</span><span class="o">-</span><span class="mi">5</span> <span class="mi">6</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">7</span><span class="p">]);</span>
-<span class="n">a</span> <span class="p">=</span> <span class="nb">axis</span><span class="p">();</span>
-<span class="nb">plot</span><span class="p">([</span><span class="n">a</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="n">a</span><span class="p">(</span><span class="mi">2</span><span class="p">)],</span> <span class="p">[</span><span class="mi">0</span> <span class="mi">0</span><span class="p">],</span> <span class="s">'color'</span><span class="p">,</span> <span class="s">'#aaa'</span><span class="p">);</span>
-<span class="nb">plot</span><span class="p">([</span><span class="mi">0</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="n">a</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="n">a</span><span class="p">(</span><span class="mi">4</span><span class="p">)],</span> <span class="s">'color'</span><span class="p">,</span> <span class="s">'#aaa'</span><span class="p">);</span>
-</pre></div></p>
-<div class="plot"><img src="plot-2.png"></div></div><div class="highlight"><pre><span></span><span class="n">params</span> <span class="p">=</span>
-  <span class="o">-</span><span class="mf">0.1213</span>   <span class="mf">1.1995</span>  <span class="o">-</span><span class="mf">3.1639</span>   <span class="mf">4.0000</span><br>
+<span class="n">area_left</span> <span class="p">=</span> <span class="nb">quad</span><span class="p">(</span><span class="n">f_left</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="o">*</span><span class="mi">6</span>
+</pre></div><div class="plot"><img src="plot-2.png"></div></div><div class="highlight"><pre><span></span><span class="n">params</span> <span class="p">=</span>
+<span class="o">-</span><span class="mf">0.1213</span>   <span class="mf">1.1995</span>  <span class="o">-</span><span class="mf">3.1639</span>   <span class="mf">4.0000</span><br>
 <span class="n">area_left</span> <span class="p">=</span> <span class="mf">8.1167</span>
+</pre></div></p>
+<p>Labā daļa:</p>
+<div class="with-plot"><div class="highlight"><div class="file-name">src/04-approx-right.m</div><pre><span></span><span class="c">%%% glītas asis</span>
+<span class="n">a</span> <span class="p">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">5</span> <span class="mi">6</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">7</span><span class="p">];</span>
+<span class="nb">plot</span><span class="p">([</span><span class="n">a</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="n">a</span><span class="p">(</span><span class="mi">2</span><span class="p">)],</span> <span class="p">[</span><span class="mi">0</span> <span class="mi">0</span><span class="p">],</span> <span class="s">&#39;color&#39;</span><span class="p">,</span> <span class="s">&#39;#aaa&#39;</span><span class="p">);</span>
+<span class="nb">hold</span> <span class="n">on</span>
+<span class="nb">plot</span><span class="p">([</span><span class="mi">0</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="n">a</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="n">a</span><span class="p">(</span><span class="mi">4</span><span class="p">)],</span> <span class="s">&#39;color&#39;</span><span class="p">,</span> <span class="s">&#39;#aaa&#39;</span><span class="p">);</span>
+<span class="nb">axis</span><span class="p">(</span><span class="n">a</span><span class="p">);</span><br>
+<span class="n">xs</span> <span class="p">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span> <span class="mi">5</span><span class="p">];</span>
+<span class="n">ys</span> <span class="p">=</span> <span class="p">[</span><span class="mi">6</span> <span class="mi">1</span><span class="p">];</span><br>
+<span class="c">% oktāva nemāk fitot eksponenti, tapēc nācās nopūsties, paņemt matlabu un iefitot koeficientus,</span>
+<span class="n">f_right_a</span> <span class="p">=</span> <span class="mf">1.844</span>
+<span class="n">f_right_b</span> <span class="p">=</span> <span class="mf">0.987</span><br>
+<span class="n">f_right</span> <span class="p">=</span> <span class="p">@(</span><span class="n">x</span><span class="p">)</span> <span class="n">f_right_a</span> <span class="o">*</span> <span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">f_right_b</span><span class="p">;</span><br>
+<span class="n">t</span> <span class="p">=</span> <span class="nb">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span><br>
+<span class="nb">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">f_right</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="s">&#39;color&#39;</span><span class="p">,</span> <span class="s">&#39;b&#39;</span><span class="p">);</span><br>
+<span class="nb">plot</span><span class="p">([</span><span class="mi">5</span> <span class="mi">5</span> <span class="o">-</span><span class="mi">1</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">6</span><span class="p">],</span> <span class="s">&#39;color&#39;</span><span class="p">,</span> <span class="s">&#39;b&#39;</span><span class="p">);</span><br>
+<span class="n">area_right</span> <span class="p">=</span> <span class="nb">quad</span><span class="p">(</span><span class="n">f_right</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</pre></div><div class="plot"><img src="plot-3.png"></div></div><div class="highlight"><pre><span></span><span class="n">f_right_a</span> <span class="p">=</span> <span class="mf">1.8440</span>
+<span class="n">f_right_b</span> <span class="p">=</span> <span class="mf">0.9870</span>
+<span class="n">area_right</span> <span class="p">=</span> <span class="mf">10.922</span>
 </pre></div>
+<p>Gala aprēķins un ilustrācija:</p>
+<div class="with-plot"><div class="highlight"><div class="file-name">src/04-total.m</div><pre><span></span><span class="c">%%% glītas asis</span>
+<span class="n">a</span> <span class="p">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">5</span> <span class="mi">6</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">7</span><span class="p">];</span>
+<span class="nb">plot</span><span class="p">([</span><span class="n">a</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="n">a</span><span class="p">(</span><span class="mi">2</span><span class="p">)],</span> <span class="p">[</span><span class="mi">0</span> <span class="mi">0</span><span class="p">],</span> <span class="s">&#39;color&#39;</span><span class="p">,</span> <span class="s">&#39;#aaa&#39;</span><span class="p">);</span>
+<span class="nb">hold</span> <span class="n">on</span><span class="p">;</span>
+<span class="nb">plot</span><span class="p">([</span><span class="mi">0</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="n">a</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="n">a</span><span class="p">(</span><span class="mi">4</span><span class="p">)],</span> <span class="s">&#39;color&#39;</span><span class="p">,</span> <span class="s">&#39;#aaa&#39;</span><span class="p">);</span>
+<span class="nb">axis</span><span class="p">(</span><span class="n">a</span><span class="p">);</span><br>
+<span class="c">% no iepriekšējiem aprēķiniem</span>
+<span class="n">area_left</span> <span class="p">=</span> <span class="mf">8.1167</span>
+<span class="n">area_right</span> <span class="p">=</span> <span class="mf">10.922</span><br>
+<span class="n">area_total</span> <span class="p">=</span> <span class="n">area_left</span> <span class="o">+</span> <span class="n">area_right</span><br>
+<span class="n">params_left</span> <span class="p">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.1213</span>   <span class="mf">1.1995</span>  <span class="o">-</span><span class="mf">3.1639</span>   <span class="mf">4.0000</span><span class="p">];</span>
+<span class="n">f_left</span> <span class="p">=</span> <span class="p">@(</span><span class="n">x</span><span class="p">)</span> <span class="nb">polyval</span><span class="p">(</span><span class="n">params_left</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+<span class="n">f_right_a</span> <span class="p">=</span> <span class="mf">1.844</span><span class="p">;</span>
+<span class="n">f_right_b</span> <span class="p">=</span> <span class="mf">0.987</span><span class="p">;</span>
+<span class="n">f_right</span> <span class="p">=</span> <span class="p">@(</span><span class="n">x</span><span class="p">)</span> <span class="n">f_right_a</span> <span class="o">*</span> <span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">f_right_b</span><span class="p">;</span><br>
+<p><span class="c">% kreisā līnija</span>
+<span class="n">t</span> <span class="p">=</span> <span class="nb">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
+<span class="nb">plot</span><span class="p">(</span><span class="o">-</span><span class="n">f_left</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="n">t</span><span class="p">,</span> <span class="s">'color'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">);</span><br>
+<span class="c">% horizontālais knariņš</span>
+<span class="nb">plot</span><span class="p">([</span><span class="o">-</span><span class="mi">2</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span> <span class="mi">6</span><span class="p">],</span> <span class="s">'color'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">);</span><br>
+<span class="c">% eksponente</span>
+<span class="n">t</span> <span class="p">=</span> <span class="nb">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
+<span class="nb">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">f_right</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="s">'color'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">);</span><br>
+<span class="c">% atlikušais stūris</span>
+<span class="nb">plot</span><span class="p">([</span><span class="mi">5</span> <span class="mi">5</span> <span class="o">-</span><span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">0</span> <span class="mi">0</span><span class="p">],</span> <span class="s">'color'</span><span class="p">,</span> <span class="s">'b'</span><span class="p">);</span>
+</pre></div><div class="plot"><img src="plot-4.png"></div></div><div class="highlight"><pre><span></span><span class="n">area_left</span> <span class="p">=</span> <span class="mf">8.1167</span>
+<span class="n">area_right</span> <span class="p">=</span> <span class="mf">10.922</span>
+<span class="n">area_total</span> <span class="p">=</span> <span class="mf">19.039</span>
+</pre></div></p>
 
 </body>
 </html>

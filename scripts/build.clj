@@ -13,8 +13,7 @@
   (spit "src/.tmp.m" octave-source)
   (->
     (shell {:dir "src", :out :string, :err :out}  "octave .tmp.m")
-    :out
-    str/trim))
+    :out))
 
 (defn append-file-name [file-name s]
   (if-not file-name
@@ -30,6 +29,7 @@
             :out :string}
       "pygmentize -l octave -f html")
     :out
+    str/trim
     (space-to-br)
     (append-file-name file-name)
     ))
@@ -49,11 +49,10 @@ print(\"../out/%s\")"
                           (slurp filename)
                           image-file))]
     (swap! current-image inc)
-    (format "<div class=\"with-plot\">%s\n<div class=\"plot\"><img src=\"%s\"></div></div>%s\n"
+    (format "<div class=\"with-plot\">%s<div class=\"plot\"><img src=\"%s\"></div></div>%s"
       (format-matlab (slurp filename) filename)
       image-file
-      (if output? (format-matlab out nil) "")
-      )))
+      (if output? (format-matlab out nil) ""))))
 
 
 (defn transform-line [l]

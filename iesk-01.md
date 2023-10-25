@@ -86,3 +86,11 @@ Figūras laukumu dalīsim divās daļās. Kreiso kārtu izteiksim kā trešās p
 Kreisā daļa:
 
 #plot+ src/04-approx-left.m
+
+Labā daļa:
+
+#plot+ src/04-approx-right.m
+
+Gala aprēķins un ilustrācija:
+
+#plot+ src/04-total.m
