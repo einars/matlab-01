@@ -34,8 +34,10 @@ body > p {
   padding: 0.5rem 1rem;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   line-height: 1.5;
+  position: relative;
 }
 
+.with-plot + .highlight,
 .highlight + .highlight {
   margin-top: 2px;
 }

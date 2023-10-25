@@ -71,10 +71,18 @@ Secināms, ka tainstūru metode ir ļoti slikta aproksimācija — pat ar šī n
 
 Ideja: uzzīmēt grafiku ar sešiem taisnstūrīšiem virsū, lai redzētu, cik tas baisi izskatās?
 
-## 3. Simpsona metode:
+## 3. Simpsona metode
 
 #include src/03-solve-simpson.m
 
 Simpsona metodei nav ne vainas: ar vien divdesmit dalījumiem, kļūda ir <1%. 
 
 Nav parādīts kodā, bet ar n=100, kļūda ir <0.1%.
+
+## 4. Figūras laukuma aprēķins
+
+Figūras laukumu dalīsim divās daļās. Kreiso kārtu izteiksim kā trešās pakāpes polinomu,
+
+Kreisā daļa:
+
+#plot+ src/04-approx-left.m

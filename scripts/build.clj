@@ -10,10 +10,11 @@
   (str/replace s "\n\n" "<br>\n"))
 
 (defn run-octave [octave-source]
-  (spit "out/.tmp.m" octave-source)
+  (spit "src/.tmp.m" octave-source)
   (->
-    (shell {:out :string, :err :out}  "octave out/.tmp.m")
-    :out))
+    (shell {:dir "src", :out :string, :err :out}  "octave .tmp.m")
+    :out
+    str/trim))
 
 (defn append-file-name [file-name s]
   (if-not file-name
@@ -35,27 +36,31 @@
 
 (defn run-script [l]
   (let [[_ filename] (str/split l #" ")]
-    (format "%s\n%s\n"
+    (str
       (format-matlab (slurp filename) filename)
       (format-matlab (run-octave (slurp filename)) nil))))
 
-(defn run-script-and-insert-plot [l]
+(defn run-script-and-insert-plot [l output?]
   (let [[_ filename] (str/split l #" ")
         image-file (format "plot-%d.png" @current-image)
-        _ (run-octave (format "
+        out (run-octave (format "
 %s
-print(\"out/%s\")"
-                        (slurp filename)
-                        image-file))]
+print(\"../out/%s\")"
+                          (slurp filename)
+                          image-file))]
     (swap! current-image inc)
-    (format "<div class=\"with-plot\">%s\n<div class=\"plot\"><img src=\"%s\"></div></div>\n"
+    (format "<div class=\"with-plot\">%s\n<div class=\"plot\"><img src=\"%s\"></div></div>%s\n"
       (format-matlab (slurp filename) filename)
-      image-file)))
+      image-file
+      (if output? (format-matlab out nil) "")
+      )))
+
 
 (defn transform-line [l]
   (cond
     (str/starts-with? l "#include") (run-script l)
-    (str/starts-with? l "#plot") (run-script-and-insert-plot l)
+    (str/starts-with? l "#plot+") (run-script-and-insert-plot l true)
+    (str/starts-with? l "#plot ") (run-script-and-insert-plot l false)
     :else l))
 
 (defn parse-special [file]
