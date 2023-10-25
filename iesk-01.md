@@ -94,3 +94,7 @@ Labā daļa:
 Gala aprēķins un ilustrācija:
 
 #plot+ src/04-total.m
+
+---
+
+Paskatīties kodu, kurš šo visu veidojis, var [githabā](https://github.com/einars/matlab-01)

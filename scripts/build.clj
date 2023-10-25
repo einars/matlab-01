@@ -21,7 +21,7 @@
     (str/replace 
       s
       "<div class=\"highlight\">"
-      (format "<div class=\"highlight\"><div class=\"file-name\">%s</div>" file-name))))
+      (format "<div class=\"highlight code\"><div class=\"file-name\">%s</div>" file-name))))
 
 (defn format-matlab [s file-name]
   (->>
@@ -31,8 +31,7 @@
     :out
     str/trim
     (space-to-br)
-    (append-file-name file-name)
-    ))
+    (append-file-name file-name)))
 
 (defn run-script [l]
   (let [[_ filename] (str/split l #" ")]

@@ -4,9 +4,15 @@
   <meta charset="utf-8">
   <style type="text/css">
 body {
-  width: 80ch;
   margin-left: 3rem;
-  padding-bottom: 10rem;
+}
+
+.code {
+  font-family: "courier new", monospace;
+}
+
+.highlight, p, h1, h2 {
+  width: 40rem;
 }
 
 p.text-center {
@@ -24,7 +30,7 @@ h1 {
 }
 
 h2 {
-  fint-family: Georgia, serif;
+  font-family: Georgia, serif;
   font-weight: 400;
   margin-bottom: 24px;
   margin-top: 48px;
@@ -47,6 +53,11 @@ body > p {
   margin-top: 2px;
 }
 
+.highlight + h2,
+.highlight + p {
+  margin-top: 32px;
+}
+
 .file-name {
   float: right;
   font-family: arial, sans-serif;
@@ -55,19 +66,16 @@ body > p {
 }
 
 .with-plot {
-  position: relative;
+  display: flex;
+  flex-direction: row;
 }
 
-.with-plot .plot {
-  position: absolute;
-  top: 0;
-  left: 82ch;
-}
 .with-plot img {
   width: 400px;
   height: auto;
   margin-top: -20px;
 }
+
 
 .highlight { background: #f8f8f8; }                                                                                                                                                                                                                                                                         
 .highlight .c { color: #3D7B7B; font-style: italic } /* Comment */                                                                                
@@ -150,7 +158,7 @@ body > p {
 x = [x1 x2 x3]
 B = [7; 5; 3]
 </code></pre>
-<div class="highlight"><div class="file-name">src/01a.m</div><pre><span></span><span class="n">d</span> <span class="p">=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">m</span> <span class="p">=</span> <span class="mi">3</span><span class="p">;</span>
+<div class="highlight code"><div class="file-name">src/01a.m</div><pre><span></span><span class="n">d</span> <span class="p">=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">m</span> <span class="p">=</span> <span class="mi">3</span><span class="p">;</span>
 <span class="n">A</span> <span class="p">=</span> <span class="p">[</span> <span class="n">d</span><span class="o">-</span><span class="mi">10</span> <span class="o">-</span><span class="mi">4</span> <span class="mi">5</span><span class="p">;</span>
       <span class="mi">3</span> <span class="n">m</span><span class="o">-</span><span class="mi">5</span> <span class="mi">7</span><span class="p">;</span>
       <span class="mi">1</span> <span class="mi">6</span> <span class="o">-</span><span class="mi">2</span> <span class="p">];</span>
@@ -172,7 +180,7 @@ B = [7; 5; 3]
   |  x +  y + z +  t =  2
   \
 </code></pre>
-<div class="highlight"><div class="file-name">src/01ba.m</div><pre><span></span><span class="n">A</span> <span class="p">=</span> <span class="p">[</span> <span class="mi">1</span> <span class="mi">0</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">1</span><span class="p">;</span>
+<div class="highlight code"><div class="file-name">src/01ba.m</div><pre><span></span><span class="n">A</span> <span class="p">=</span> <span class="p">[</span> <span class="mi">1</span> <span class="mi">0</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">1</span><span class="p">;</span>
       <span class="mi">2</span> <span class="mi">3</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">0</span><span class="p">;</span>
       <span class="mi">5</span> <span class="mi">0</span> <span class="mi">0</span> <span class="o">-</span><span class="mi">3</span><span class="p">;</span>
       <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="p">];</span>
@@ -195,7 +203,7 @@ B = [7; 5; 3]
  | 3x - 3y + 4z =  5
   \
 </code></pre>
-<div class="highlight"><div class="file-name">src/01bb.m</div><pre><span></span><span class="n">A</span> <span class="p">=</span> <span class="p">[</span> <span class="mi">2</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">1</span><span class="p">;</span>
+<div class="highlight code"><div class="file-name">src/01bb.m</div><pre><span></span><span class="n">A</span> <span class="p">=</span> <span class="p">[</span> <span class="mi">2</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">1</span><span class="p">;</span>
       <span class="mi">1</span> <span class="o">-</span><span class="mi">2</span> <span class="mi">3</span><span class="p">;</span>
       <span class="mi">3</span> <span class="o">-</span><span class="mi">3</span> <span class="mi">4</span><span class="p">];</span>
 <span class="n">B</span> <span class="p">=</span> <span class="p">[</span> <span class="mi">9</span><span class="p">;</span> <span class="mi">10</span><span class="p">;</span> <span class="mi">5</span> <span class="p">];</span><br>
@@ -219,7 +227,7 @@ B = [7; 5; 3]
 <h2>2. Atrast vienādojuma saknes intervālā [-1; 4]</h2>
 <p>sqrt(3) * sin(1.7 x) * log(4.6 - x) = 0</p>
 <p>Ziņkārības pēc, apskatīsim grafiku:</p>
-<div class="with-plot"><div class="highlight"><div class="file-name">src/02-plot.m</div><pre><span></span><span class="n">from</span> <span class="p">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<div class="with-plot"><div class="highlight code"><div class="file-name">src/02-plot.m</div><pre><span></span><span class="n">from</span> <span class="p">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
 <span class="n">to</span> <span class="p">=</span> <span class="mi">4</span><span class="p">;</span><br>
 <span class="n">xs</span> <span class="p">=</span> <span class="nb">linspace</span><span class="p">(</span><span class="n">from</span><span class="p">,</span> <span class="n">to</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
 <span class="n">ys</span> <span class="p">=</span> <span class="nb">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">.*</span> <span class="nb">sin</span><span class="p">(</span><span class="mf">1.7</span> <span class="o">.*</span> <span class="n">xs</span><span class="p">)</span> <span class="o">.*</span> <span class="nb">log</span><span class="p">(</span><span class="mf">4.6</span> <span class="o">-</span> <span class="n">xs</span><span class="p">)</span><br>
@@ -230,7 +238,7 @@ B = [7; 5; 3]
 </pre></div><div class="plot"><img src="plot-1.png"></div></div>
 <p>Uz aci izskatās, ka saknes ir trīs (kaut iespējams, ap 3.6 ir divas, ja kūkums šķērso y asi, nevis tai tikai pieskaras).</p>
 <p>Izmantosim <code>symbolic</code> paciņu, lai atrisinātu šo vienādojumu pa īstam.</p>
-<div class="highlight"><div class="file-name">src/02-solve.m</div><pre><span></span><span class="n">pkg</span> <span class="nb">load</span> <span class="n">symbolic</span><span class="p">;</span><br>
+<div class="highlight code"><div class="file-name">src/02-solve.m</div><pre><span></span><span class="n">pkg</span> <span class="nb">load</span> <span class="n">symbolic</span><span class="p">;</span><br>
 <span class="n">syms</span> <span class="n">x</span><span class="p">;</span><br>
 <span class="n">f</span> <span class="p">=</span> <span class="nb">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="nb">sin</span><span class="p">(</span><span class="mi">17</span><span class="o">/</span><span class="mi">10</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span> <span class="o">*</span> <span class="nb">log</span><span class="p">(</span><span class="mi">46</span><span class="o">/</span><span class="mi">10</span> <span class="o">-</span> <span class="n">x</span><span class="p">);</span><br>
 <span class="n">solve</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><br>
@@ -273,7 +281,7 @@ B = [7; 5; 3]
 <p>2. variants:</p>
 <p>f(x) = sin(x + sqrt(x))</p>
 <p>a = 0, b = 12</p>
-<div class="highlight"><div class="file-name">src/03-solve-quad.m</div><pre><span></span><span class="n">f</span> <span class="p">=</span> <span class="p">@(</span><span class="n">x</span><span class="p">)</span> <span class="nb">sin</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="nb">sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">));</span><br>
+<div class="highlight code"><div class="file-name">src/03-solve-quad.m</div><pre><span></span><span class="n">f</span> <span class="p">=</span> <span class="p">@(</span><span class="n">x</span><span class="p">)</span> <span class="nb">sin</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="nb">sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">));</span><br>
 <span class="n">a</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span>
 <span class="n">b</span> <span class="p">=</span> <span class="mi">12</span><span class="p">;</span><br>
 <span class="k">function</span><span class="w"> </span>retval<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nf">tainst_integr </span><span class="p">(</span>f, a, b, n<span class="p">)</span>
@@ -298,7 +306,7 @@ B = [7; 5; 3]
 <p>Secināms, ka tainstūru metode ir ļoti slikta aproksimācija — pat ar šī nelielā intervāla dalīšanu 100 daļās, kļūda ir gandrīz 2%, kamēr sešu daļu dalīšana neder pavisam nekam.</p>
 <p>Ideja: uzzīmēt grafiku ar sešiem taisnstūrīšiem virsū, lai redzētu, cik tas baisi izskatās?</p>
 <h2>3. Simpsona metode</h2>
-<div class="highlight"><div class="file-name">src/03-solve-simpson.m</div><pre><span></span><span class="n">f</span> <span class="p">=</span> <span class="p">@(</span><span class="n">x</span><span class="p">)</span> <span class="nb">sin</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="nb">sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">));</span><br>
+<div class="highlight code"><div class="file-name">src/03-solve-simpson.m</div><pre><span></span><span class="n">f</span> <span class="p">=</span> <span class="p">@(</span><span class="n">x</span><span class="p">)</span> <span class="nb">sin</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="nb">sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">));</span><br>
 <span class="n">a</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span>
 <span class="n">b</span> <span class="p">=</span> <span class="mi">12</span><span class="p">;</span><br>
 <span class="k">function</span><span class="w"> </span>retval<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nf">integr_simpson</span><span class="p">(</span>f, a, b, n<span class="p">)</span>
@@ -322,7 +330,7 @@ B = [7; 5; 3]
 <h2>4. Figūras laukuma aprēķins</h2>
 <p>Figūras laukumu dalīsim divās daļās. Kreiso kārtu izteiksim kā trešās pakāpes polinomu,</p>
 <p>Kreisā daļa:</p>
-<div class="with-plot"><div class="highlight"><div class="file-name">src/04-approx-left.m</div><pre><span></span><span class="c">%%% glītas asis</span>
+<div class="with-plot"><div class="highlight code"><div class="file-name">src/04-approx-left.m</div><pre><span></span><span class="c">%%% glītas asis</span>
 <span class="n">a</span> <span class="p">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">5</span> <span class="mi">6</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">7</span><span class="p">];</span>
 <span class="nb">plot</span><span class="p">([</span><span class="n">a</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="n">a</span><span class="p">(</span><span class="mi">2</span><span class="p">)],</span> <span class="p">[</span><span class="mi">0</span> <span class="mi">0</span><span class="p">],</span> <span class="s">&#39;color&#39;</span><span class="p">,</span> <span class="s">&#39;#aaa&#39;</span><span class="p">);</span>
 <span class="nb">hold</span> <span class="n">on</span><span class="p">;</span>
@@ -344,7 +352,7 @@ B = [7; 5; 3]
 <span class="n">area_left</span> <span class="p">=</span> <span class="mf">8.1167</span>
 </pre></div></p>
 <p>Labā daļa:</p>
-<div class="with-plot"><div class="highlight"><div class="file-name">src/04-approx-right.m</div><pre><span></span><span class="c">%%% glītas asis</span>
+<div class="with-plot"><div class="highlight code"><div class="file-name">src/04-approx-right.m</div><pre><span></span><span class="c">%%% glītas asis</span>
 <span class="n">a</span> <span class="p">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">5</span> <span class="mi">6</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">7</span><span class="p">];</span>
 <span class="nb">plot</span><span class="p">([</span><span class="n">a</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="n">a</span><span class="p">(</span><span class="mi">2</span><span class="p">)],</span> <span class="p">[</span><span class="mi">0</span> <span class="mi">0</span><span class="p">],</span> <span class="s">&#39;color&#39;</span><span class="p">,</span> <span class="s">&#39;#aaa&#39;</span><span class="p">);</span>
 <span class="nb">hold</span> <span class="n">on</span>
@@ -365,7 +373,7 @@ B = [7; 5; 3]
 <span class="n">area_right</span> <span class="p">=</span> <span class="mf">10.922</span>
 </pre></div>
 <p>Gala aprēķins un ilustrācija:</p>
-<div class="with-plot"><div class="highlight"><div class="file-name">src/04-total.m</div><pre><span></span><span class="c">%%% glītas asis</span>
+<div class="with-plot"><div class="highlight code"><div class="file-name">src/04-total.m</div><pre><span></span><span class="c">%%% glītas asis</span>
 <span class="n">a</span> <span class="p">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">5</span> <span class="mi">6</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">7</span><span class="p">];</span>
 <span class="nb">plot</span><span class="p">([</span><span class="n">a</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="n">a</span><span class="p">(</span><span class="mi">2</span><span class="p">)],</span> <span class="p">[</span><span class="mi">0</span> <span class="mi">0</span><span class="p">],</span> <span class="s">&#39;color&#39;</span><span class="p">,</span> <span class="s">&#39;#aaa&#39;</span><span class="p">);</span>
 <span class="nb">hold</span> <span class="n">on</span><span class="p">;</span>
@@ -394,6 +402,8 @@ B = [7; 5; 3]
 <span class="n">area_right</span> <span class="p">=</span> <span class="mf">10.922</span>
 <span class="n">area_total</span> <span class="p">=</span> <span class="mf">19.039</span>
 </pre></div></p>
+<hr>
+<p>Paskatīties kodu, kurš šo visu veidojis, <a href="https://github.com/einars/matlab-01">githabā</a></p>
 
 </body>
 </html>
