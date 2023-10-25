@@ -296,22 +296,22 @@ B = [7; 5; 3]
 <span class="w">  </span><span class="n">pts</span> <span class="p">=</span> <span class="nb">linspace</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span>
   <span class="n">width</span> <span class="p">=</span> <span class="n">pts</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="n">pts</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
   <span class="n">midpoints</span> <span class="p">=</span> <span class="n">pts</span> <span class="o">+</span> <span class="n">width</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+  <span class="c">% sic! pēdējais neskaitās!</span>
+  <span class="n">midpoints</span> <span class="p">=</span> <span class="n">midpoints</span><span class="p">(:,</span><span class="mi">1</span><span class="p">:</span><span class="k">end</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
   <span class="n">retval</span> <span class="p">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">midpoints</span><span class="p">)</span> <span class="o">*</span> <span class="n">width</span><span class="p">);</span>
 <span class="k">end</span><br>
 <span class="c">% laba atbilde</span>
 <span class="n">a_quad</span> <span class="p">=</span> <span class="nb">quad</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span><br>
 <span class="c">% tainsntūru metode</span>
 <span class="n">a_6</span> <span class="p">=</span> <span class="n">tainst_integr</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
-<span class="n">a_50</span> <span class="p">=</span> <span class="n">tainst_integr</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
-<span class="n">a_100</span> <span class="p">=</span> <span class="n">tainst_integr</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span><br>
-<span class="n">err_100</span> <span class="p">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">a_100</span> <span class="o">-</span> <span class="n">a_quad</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span> <span class="o">/</span> <span class="n">a_quad</span>
+<span class="n">a_50</span> <span class="p">=</span> <span class="n">tainst_integr</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span><br>
+<span class="n">err_50</span> <span class="p">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">a_50</span> <span class="o">-</span> <span class="n">a_quad</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span> <span class="o">/</span> <span class="n">a_quad</span>
 </pre></div><div class="highlight"><pre><span></span><span class="n">a_quad</span> <span class="p">=</span> <span class="mf">1.3144</span>
-<span class="n">a_6</span> <span class="p">=</span> <span class="mf">0.026410</span>
-<span class="n">a_50</span> <span class="p">=</span> <span class="mf">1.3524</span>
-<span class="n">a_100</span> <span class="p">=</span> <span class="mf">1.3393</span>
-<span class="n">err_100</span> <span class="p">=</span> <span class="mf">1.8941</span>
+<span class="n">a_6</span> <span class="p">=</span> <span class="mf">2.1921</span>
+<span class="n">a_50</span> <span class="p">=</span> <span class="mf">1.3271</span>
+<span class="n">err_50</span> <span class="p">=</span> <span class="mf">0.9590</span>
 </pre></div>
-<p>Secināms, ka tainstūru metode ir ļoti slikta aproksimācija — pat ar šī nelielā intervāla dalīšanu 100 daļās, kļūda ir gandrīz 2%, kamēr sešu daļu dalīšana neder pavisam nekam.</p>
+<p>Secināms, ka taisnstūru metode ir ciešama aproksimācija — ar šī nelielā intervāla dalīšanu 50 daļās, kļūda ir zem 1%, tomēr sešu daļu dalīšana neder pavisam nekam.</p>
 <p>Ideja: uzzīmēt grafiku ar sešiem taisnstūrīšiem virsū, lai redzētu, cik tas baisi izskatās?</p>
 <h2>3. Simpsona metode</h2>
 <div class="highlight code"><div class="file-name">src/03-solve-simpson.m</div><pre><span></span><span class="n">f</span> <span class="p">=</span> <span class="p">@(</span><span class="n">x</span><span class="p">)</span> <span class="nb">sin</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="nb">sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">));</span><br>
@@ -333,8 +333,7 @@ B = [7; 5; 3]
 </pre></div><div class="highlight"><pre><span></span><span class="n">a_simp</span> <span class="p">=</span> <span class="mf">1.3133</span>
 <span class="n">err_simp</span> <span class="p">=</span> <span class="mf">0.090878</span>
 </pre></div></p>
-<p>Simpsona metodei nav ne vainas: ar vien divdesmit dalījumiem, kļūda ir &lt;1%.</p>
-<p>Nav parādīts kodā, bet ar n=100, kļūda ir &lt;0.1%.</p>
+<p>Simpsona metodei nav ne vainas: ar vien divdesmit dalījumiem, kļūda ir &lt;0.1%.</p>
 <h2>4. Figūras laukuma aprēķins</h2>
 <p>Figūras laukumu dalīsim divās daļās. Kreiso kārtu izteiksim kā trešās pakāpes polinomu,</p>
 <p>Kreisā daļa:</p>

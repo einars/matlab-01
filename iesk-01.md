@@ -75,9 +75,7 @@ Ideja: uzzīmēt grafiku ar sešiem taisnstūrīšiem virsū, lai redzētu, cik 
 
 #include src/03-solve-simpson.m
 
-Simpsona metodei nav ne vainas: ar vien divdesmit dalījumiem, kļūda ir <1%. 
-
-Nav parādīts kodā, bet ar n=100, kļūda ir <0.1%.
+Simpsona metodei nav ne vainas: ar vien divdesmit dalījumiem, kļūda ir <0.1%. 
 
 ## 4. Figūras laukuma aprēķins
 
