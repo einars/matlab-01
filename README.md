@@ -1,8 +1,6 @@
 # Kāda Matlab ieskaite skolā, izpildīta uz GNU Octave
 
-Tev šo nevajag. Šis ir šablons, kurš ļauj man uzģenerēt HTML un PDF papīru, kurā automātiski tiek iekļauts krāsains Matlab/Octave kods, ievieto uzzīmētos grafikus un koda izpildes rezultātus.
-
-/iesk-01.md ir 
+Tev šo nevajag. Šis ir šablons, kurš ļauj man uzģenerēt HTML un PDF papīru, kurā automātiski tiek iekļauts krāsains Matlab/Octave kods, ievietoti uzzīmētie grafiki un koda izpildes rezultāti.
 
 ## Ja šķiet, ka tomēr šo vajag, tev vajadzēs arī:
 
@@ -20,7 +18,7 @@ Teicu taču, ka nevajag.
 
 ## Faili un mapītes
 
-- /iesk-01.md — ieskaites teksts,
-- scripts/run — ar šo es uzģenerēju gala dokumentu,
-- src/ — uzdevumu risinājumi, grafiku zīmētāji etc,
-- out/ — te nonāk rezultējošie faili.
+- /iesk-01.md — pats teksts,
+- src/ — Octave/Matlab faili, kuri tiek laisti un iekļauti rezultējošajā dokumentā,
+- out/ — te nonāk rezultāti, kā index.html + bildītes un, eventuāli, pdf,
+- scripts/run — palaižamais fails, kurš visu izdara.
