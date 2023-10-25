@@ -67,7 +67,7 @@ a = 0, b = 12
 
 #include src/03-solve-quad.m
 
-Secināms, ka tainstūru metode ir ļoti slikta aproksimācija — pat ar šī nelielā intervāla dalīšanu 100 daļās, kļūda ir gandrīz 2%, kamēr sešu daļu dalīšana neder pavisam nekam.
+Secināms, ka taisnstūru metode ir ciešama aproksimācija — ar šī nelielā intervāla dalīšanu 50 daļās, kļūda ir zem 1%, tomēr sešu daļu dalīšana neder pavisam nekam.
 
 Ideja: uzzīmēt grafiku ar sešiem taisnstūrīšiem virsū, lai redzētu, cik tas baisi izskatās?
 
